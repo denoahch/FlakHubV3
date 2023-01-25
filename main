@@ -1,155 +1,249 @@
--- Gui to Lua
--- Version: 3.2
+--[[
+	Roblox2Lua
+	----------
+	
+	This code was generated using
+	Deluct's Roblox2Lua plugin.
+]]--
 
--- Instances:
+--// Instances
 
-local FlakHubV2 = Instance.new("ScreenGui")
-local Login = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local LOADING = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
-local Manual = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
-local TextLabel_2 = Instance.new("TextLabel")
-local PleasecheckconsoleF9 = Instance.new("TextLabel")
-local Login_2 = Instance.new("TextLabel")
-local ImageLabel = Instance.new("ImageLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local TextLabel_4 = Instance.new("TextLabel")
-local Client = Instance.new("Frame")
+local flak_hub_v2 = Instance.new("ScreenGui")
+flak_hub_v2.IgnoreGuiInset = false
+flak_hub_v2.ResetOnSpawn = true
+flak_hub_v2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+flak_hub_v2.Name = "FlakHubV2"
+flak_hub_v2.Parent = workspace
 
---Properties:
+local local_script = Instance.new("LocalScript")
+local_script.Parent = flak_hub_v2
 
-FlakHubV2.Name = "FlakHubV2"
-FlakHubV2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-FlakHubV2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+local login = Instance.new("Frame")
+login.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+login.BorderSizePixel = 0
+login.Position = UDim2.new(0.371172518, 0, 0.28553617, 0)
+login.Size = UDim2.new(0, 345, 0, 344)
+login.Visible = false
+login.Name = "Login"
+login.Parent = flak_hub_v2
 
-Login.Name = "Login"
-Login.Parent = FlakHubV2
-Login.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-Login.BorderSizePixel = 0
-Login.Position = UDim2.new(0.371172518, 0, 0.28553617, 0)
-Login.Size = UDim2.new(0, 345, 0, 344)
-Login.Visible = false
+local uicorner = Instance.new("UICorner")
+uicorner.Parent = login
 
-UICorner.Parent = Login
+local local_script_2 = Instance.new("LocalScript")
+local_script_2.Parent = login
 
-LOADING.Name = "LOADING"
-LOADING.Parent = FlakHubV2
-LOADING.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-LOADING.BorderSizePixel = 0
-LOADING.Position = UDim2.new(0.253920823, 0, 0.298004985, 0)
-LOADING.Size = UDim2.new(0, 658, 0, 323)
+local loading = Instance.new("Frame")
+loading.BackgroundColor3 = Color3.new(0.133333, 0.133333, 0.133333)
+loading.BorderSizePixel = 0
+loading.Position = UDim2.new(0.253920823, 0, 0.240312681, 0)
+loading.Size = UDim2.new(0, 658, 0, 323)
+loading.Visible = true
+loading.Name = "LOADING"
+loading.Parent = flak_hub_v2
 
-UICorner_2.Parent = LOADING
+local uicorner_2 = Instance.new("UICorner")
+uicorner_2.Parent = loading
 
-TextLabel.Parent = LOADING
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.208206683, 0, 0.0402476788, 0)
-TextLabel.Size = UDim2.new(0, 385, 0, 50)
-TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "FLAKHUBV3 LOADING"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+local text_label = Instance.new("TextLabel")
+text_label.Font = Enum.Font.FredokaOne
+text_label.Text = "FLAKHUBV3 LOADING"
+text_label.TextColor3 = Color3.new(1, 1, 1)
+text_label.TextScaled = true
+text_label.TextSize = 14
+text_label.TextWrapped = true
+text_label.BackgroundColor3 = Color3.new(1, 1, 1)
+text_label.BackgroundTransparency = 1
+text_label.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+text_label.BorderSizePixel = 0
+text_label.Position = UDim2.new(0.208206683, 0, 0.0402476788, 0)
+text_label.Size = UDim2.new(0, 385, 0, 50)
+text_label.Visible = true
+text_label.Parent = loading
 
-Manual.Name = "Manual"
-Manual.Parent = LOADING
-Manual.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
-Manual.Position = UDim2.new(0.0486322194, 0, 0.22291021, 0)
-Manual.Size = UDim2.new(0, 594, 0, 223)
+local manual = Instance.new("Frame")
+manual.BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)
+manual.Position = UDim2.new(0.0486322194, 0, 0.22291021, 0)
+manual.Size = UDim2.new(0, 594, 0, 223)
+manual.Visible = true
+manual.Name = "Manual"
+manual.Parent = loading
 
-UICorner_3.Parent = Manual
+local uicorner_3 = Instance.new("UICorner")
+uicorner_3.Parent = manual
 
-TextLabel_2.Parent = Manual
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0.33164984, 0, 0.385650218, 0)
-TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
-TextLabel_2.Font = Enum.Font.FredokaOne
-TextLabel_2.Text = "LOADING..."
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextWrapped = true
+local text_label_2 = Instance.new("TextLabel")
+text_label_2.Font = Enum.Font.FredokaOne
+text_label_2.Text = "LOADING..."
+text_label_2.TextColor3 = Color3.new(0, 0, 0)
+text_label_2.TextScaled = true
+text_label_2.TextSize = 14
+text_label_2.TextWrapped = true
+text_label_2.BackgroundColor3 = Color3.new(1, 1, 1)
+text_label_2.BackgroundTransparency = 1
+text_label_2.Position = UDim2.new(0.33164984, 0, 0.385650218, 0)
+text_label_2.Size = UDim2.new(0, 200, 0, 50)
+text_label_2.Visible = true
+text_label_2.Parent = manual
 
-PleasecheckconsoleF9.Name = "Please check console [F9]"
-PleasecheckconsoleF9.Parent = LOADING
-PleasecheckconsoleF9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PleasecheckconsoleF9.BackgroundTransparency = 1.000
-PleasecheckconsoleF9.Position = UDim2.new(0.244680852, 0, 0.22291021, 0)
-PleasecheckconsoleF9.Size = UDim2.new(0, 361, 0, 23)
-PleasecheckconsoleF9.Font = Enum.Font.Cartoon
-PleasecheckconsoleF9.Text = "Please check console [F9]"
-PleasecheckconsoleF9.TextColor3 = Color3.fromRGB(0, 0, 0)
-PleasecheckconsoleF9.TextScaled = true
-PleasecheckconsoleF9.TextSize = 14.000
-PleasecheckconsoleF9.TextWrapped = true
+local local_script_3 = Instance.new("LocalScript")
+local_script_3.Parent = text_label_2
 
-Login_2.Name = "Login"
-Login_2.Parent = LOADING
-Login_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Login_2.BackgroundTransparency = 1.000
-Login_2.Position = UDim2.new(-0.0577507615, 0, 0.29411763, 0)
-Login_2.Size = UDim2.new(0, 361, 0, 23)
-Login_2.Visible = false
-Login_2.Font = Enum.Font.Cartoon
-Login_2.Text = "Login as:"
-Login_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-Login_2.TextScaled = true
-Login_2.TextSize = 14.000
-Login_2.TextWrapped = true
+local pleasecheckconsole_f9 = Instance.new("TextLabel")
+pleasecheckconsole_f9.Font = Enum.Font.Cartoon
+pleasecheckconsole_f9.Text = "Please check console [F9]"
+pleasecheckconsole_f9.TextColor3 = Color3.new(0, 0, 0)
+pleasecheckconsole_f9.TextScaled = true
+pleasecheckconsole_f9.TextSize = 14
+pleasecheckconsole_f9.TextWrapped = true
+pleasecheckconsole_f9.BackgroundColor3 = Color3.new(1, 1, 1)
+pleasecheckconsole_f9.BackgroundTransparency = 1
+pleasecheckconsole_f9.Position = UDim2.new(0.244680852, 0, 0.22291021, 0)
+pleasecheckconsole_f9.Size = UDim2.new(0, 361, 0, 23)
+pleasecheckconsole_f9.Visible = true
+pleasecheckconsole_f9.Name = "Please check console [F9]"
+pleasecheckconsole_f9.Parent = loading
 
-ImageLabel.Parent = Login_2
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.Position = UDim2.new(0.277008295, 0, 1.30434799, 0)
-ImageLabel.Size = UDim2.new(0, 160, 0, 160)
-ImageLabel.Image = "rbxassetid://59430545"
+local login_2 = Instance.new("TextLabel")
+login_2.Font = Enum.Font.Cartoon
+login_2.Text = "Login as:"
+login_2.TextColor3 = Color3.new(0, 0, 0)
+login_2.TextScaled = true
+login_2.TextSize = 14
+login_2.TextWrapped = true
+login_2.BackgroundColor3 = Color3.new(1, 1, 1)
+login_2.BackgroundTransparency = 1
+login_2.Position = UDim2.new(-0.0577507615, 0, 0.29411763, 0)
+login_2.Size = UDim2.new(0, 361, 0, 23)
+login_2.Visible = false
+login_2.Name = "Login"
+login_2.Parent = loading
 
-TextLabel_3.Parent = Login_2
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.Position = UDim2.new(0.739612162, 0, 2.7391305, 0)
-TextLabel_3.Size = UDim2.new(0, 200, 0, 50)
-TextLabel_3.Font = Enum.Font.Cartoon
-TextLabel_3.Text = "USERNAME"
-TextLabel_3.TextColor3 = Color3.fromRGB(131, 131, 131)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 14.000
-TextLabel_3.TextWrapped = true
+local image_label = Instance.new("ImageLabel")
+image_label.Image = "rbxassetid://59430545"
+image_label.BackgroundColor3 = Color3.new(1, 1, 1)
+image_label.BackgroundTransparency = 1
+image_label.Position = UDim2.new(0.277008295, 0, 1.30434799, 0)
+image_label.Size = UDim2.new(0, 160, 0, 160)
+image_label.Visible = true
+image_label.Parent = login_2
 
-TextLabel_4.Parent = TextLabel_3
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.Position = UDim2.new(0.0896121264, 0, 0.999130249, 0)
-TextLabel_4.Size = UDim2.new(0, 164, 0, 20)
-TextLabel_4.Font = Enum.Font.Cartoon
-TextLabel_4.Text = "DEFAULT"
-TextLabel_4.TextColor3 = Color3.fromRGB(131, 131, 131)
-TextLabel_4.TextScaled = true
-TextLabel_4.TextSize = 14.000
-TextLabel_4.TextWrapped = true
+local local_script_4 = Instance.new("LocalScript")
+local_script_4.Parent = image_label
 
-Client.Name = "Client"
-Client.Parent = FlakHubV2
-Client.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Client.Size = UDim2.new(0, 100, 0, 100)
-Client.Visible = false
+local text_label_3 = Instance.new("TextLabel")
+text_label_3.Font = Enum.Font.Cartoon
+text_label_3.Text = "USERNAME"
+text_label_3.TextColor3 = Color3.new(0.513726, 0.513726, 0.513726)
+text_label_3.TextScaled = true
+text_label_3.TextSize = 14
+text_label_3.TextWrapped = true
+text_label_3.BackgroundColor3 = Color3.new(1, 1, 1)
+text_label_3.BackgroundTransparency = 1
+text_label_3.Position = UDim2.new(0.739612162, 0, 2.7391305, 0)
+text_label_3.Size = UDim2.new(0, 200, 0, 50)
+text_label_3.Visible = true
+text_label_3.Parent = login_2
 
--- Scripts:
+local text_label_4 = Instance.new("TextLabel")
+text_label_4.Font = Enum.Font.Cartoon
+text_label_4.Text = "DEFAULT"
+text_label_4.TextColor3 = Color3.new(0.513726, 0.513726, 0.513726)
+text_label_4.TextScaled = true
+text_label_4.TextSize = 14
+text_label_4.TextWrapped = true
+text_label_4.BackgroundColor3 = Color3.new(1, 1, 1)
+text_label_4.BackgroundTransparency = 1
+text_label_4.Position = UDim2.new(0.0896121264, 0, 0.999130249, 0)
+text_label_4.Size = UDim2.new(0, 164, 0, 20)
+text_label_4.Visible = true
+text_label_4.Parent = text_label_3
 
-local function TLRNSL_fake_script() -- FlakHubV2.LocalScript 
-	local script = Instance.new('LocalScript', FlakHubV2)
+local client = Instance.new("Frame")
+client.Active = true
+client.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+client.Position = UDim2.new(0.230022401, 0, 0.0977564082, 0)
+client.Size = UDim2.new(0, 721, 0, 500)
+client.Visible = false
+client.Name = "Client"
+client.Parent = flak_hub_v2
+
+local local_script_5 = Instance.new("LocalScript")
+local_script_5.Parent = client
+
+local uicorner_4 = Instance.new("UICorner")
+uicorner_4.Parent = client
+
+local line = Instance.new("Frame")
+line.Active = true
+line.BackgroundColor3 = Color3.new(0.223529, 0.223529, 0.223529)
+line.Size = UDim2.new(1, 0, 0.061999999, 0)
+line.Visible = true
+line.Name = "Line"
+line.Parent = client
+
+local logo = Instance.new("ImageLabel")
+logo.Image = "rbxassetid://9928831214"
+logo.BackgroundColor3 = Color3.new(1, 1, 1)
+logo.BackgroundTransparency = 1
+logo.Position = UDim2.new(0, 0, 0.0765161812, 0)
+logo.Size = UDim2.new(0.0554785021, 0, 0.923483789, 0)
+logo.Visible = true
+logo.Name = "Logo"
+logo.Parent = line
+
+local uicorner_5 = Instance.new("UICorner")
+uicorner_5.Parent = line
+
+local text_label_5 = Instance.new("TextLabel")
+text_label_5.Font = Enum.Font.FredokaOne
+text_label_5.Text = "Flak Hub V3"
+text_label_5.TextColor3 = Color3.new(0, 0, 0)
+text_label_5.TextSize = 20
+text_label_5.TextWrapped = true
+text_label_5.BackgroundColor3 = Color3.new(1, 1, 1)
+text_label_5.BackgroundTransparency = 1
+text_label_5.Position = UDim2.new(0.0221914016, 0, 0, 0)
+text_label_5.Size = UDim2.new(0, 153, 0, 31)
+text_label_5.Visible = true
+text_label_5.Parent = line
+
+local text_button = Instance.new("TextButton")
+text_button.Font = Enum.Font.SourceSans
+text_button.Text = "X"
+text_button.TextColor3 = Color3.new(0, 0, 0)
+text_button.TextScaled = true
+text_button.TextSize = 14
+text_button.TextWrapped = true
+text_button.BackgroundColor3 = Color3.new(1, 1, 1)
+text_button.BackgroundTransparency = 1
+text_button.BorderSizePixel = 0
+text_button.Position = UDim2.new(0.941747546, 0, 0.0645161271, 0)
+text_button.Size = UDim2.new(0, 42, 0, 29)
+text_button.Visible = true
+text_button.Parent = line
+
+--//Modules
+
+local modules = {}
+
+--// Scripts
+
+-- LocalScript
+task.spawn(function()
+	local script = local_script
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
 
 	_G.gamen = game.Name
 	_G.license = "active"
-	_G.loaded = "nein"
+	_G.loaded = "nein" -- DO NOT CHANGE
 	
 	script.Parent.LOADING.Visible = true
 	print("---------FLAK HUB V3---------")
@@ -183,19 +277,37 @@ local function TLRNSL_fake_script() -- FlakHubV2.LocalScript
 		wait(10)
 		script.Parent:Destroy()
 	end
-end
-coroutine.wrap(TLRNSL_fake_script)()
-local function LBAVM_fake_script() -- Login.LocalScript 
-	local script = Instance.new('LocalScript', Login)
+end)
+
+-- LocalScript
+task.spawn(function()
+	local script = local_script_2
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
 
 	frame = script.Parent
 	frame.Draggable = true
 	frame.Active = true
 	frame.Selectable = true
-end
-coroutine.wrap(LBAVM_fake_script)()
-local function DJAQ_fake_script() -- TextLabel_2.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel_2)
+end)
+
+-- LocalScript
+task.spawn(function()
+	local script = local_script_3
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
 
 	while _G.loaded == "nein" do
 			script.Parent.Text = "LOADING..."
@@ -219,12 +331,22 @@ local function DJAQ_fake_script() -- TextLabel_2.LocalScript
 		script.Parent.Parent.Parent.Login.Visible = true
 		wait(3)
 		script.Parent.Parent.Parent.Visible = false
-		script.Parent.Parent.Parent.Parent.Login.Visible = false
+	script.Parent.Parent.Parent.Parent.Login.Visible = false
+	script.Parent.Parent.Parent.Parent.Client.Visible = true
 		script.Parent.Parent:Destroy()
-end
-coroutine.wrap(DJAQ_fake_script)()
-local function AQYRGDN_fake_script() -- ImageLabel.LocalScript 
-	local script = Instance.new('LocalScript', ImageLabel)
+end)
+
+-- LocalScript
+task.spawn(function()
+	local script = local_script_4
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
 
 	local frame = script.Parent
 	
@@ -249,5 +371,22 @@ local function AQYRGDN_fake_script() -- ImageLabel.LocalScript
 	frame.Image = content
 	
 	frame.Parent.TextLabel.Text = player.Name
-end
-coroutine.wrap(AQYRGDN_fake_script)()
+end)
+
+-- LocalScript
+task.spawn(function()
+	local script = local_script_5
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	frame = script.Parent
+	frame.Draggable = true
+	frame.Active = true
+	frame.Line.Selectable = true
+end)
