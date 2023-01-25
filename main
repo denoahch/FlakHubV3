@@ -1,1 +1,253 @@
+-- Gui to Lua
+-- Version: 3.2
 
+-- Instances:
+
+local FlakHubV2 = Instance.new("ScreenGui")
+local Login = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local LOADING = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local Manual = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local PleasecheckconsoleF9 = Instance.new("TextLabel")
+local Login_2 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local Client = Instance.new("Frame")
+
+--Properties:
+
+FlakHubV2.Name = "FlakHubV2"
+FlakHubV2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+FlakHubV2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Login.Name = "Login"
+Login.Parent = FlakHubV2
+Login.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+Login.BorderSizePixel = 0
+Login.Position = UDim2.new(0.371172518, 0, 0.28553617, 0)
+Login.Size = UDim2.new(0, 345, 0, 344)
+Login.Visible = false
+
+UICorner.Parent = Login
+
+LOADING.Name = "LOADING"
+LOADING.Parent = FlakHubV2
+LOADING.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+LOADING.BorderSizePixel = 0
+LOADING.Position = UDim2.new(0.253920823, 0, 0.298004985, 0)
+LOADING.Size = UDim2.new(0, 658, 0, 323)
+
+UICorner_2.Parent = LOADING
+
+TextLabel.Parent = LOADING
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.208206683, 0, 0.0402476788, 0)
+TextLabel.Size = UDim2.new(0, 385, 0, 50)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "FLAKHUBV3 LOADING"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Manual.Name = "Manual"
+Manual.Parent = LOADING
+Manual.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Manual.Position = UDim2.new(0.0486322194, 0, 0.22291021, 0)
+Manual.Size = UDim2.new(0, 594, 0, 223)
+
+UICorner_3.Parent = Manual
+
+TextLabel_2.Parent = Manual
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.33164984, 0, 0.385650218, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_2.Font = Enum.Font.FredokaOne
+TextLabel_2.Text = "LOADING..."
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+PleasecheckconsoleF9.Name = "Please check console [F9]"
+PleasecheckconsoleF9.Parent = LOADING
+PleasecheckconsoleF9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PleasecheckconsoleF9.BackgroundTransparency = 1.000
+PleasecheckconsoleF9.Position = UDim2.new(0.244680852, 0, 0.22291021, 0)
+PleasecheckconsoleF9.Size = UDim2.new(0, 361, 0, 23)
+PleasecheckconsoleF9.Font = Enum.Font.Cartoon
+PleasecheckconsoleF9.Text = "Please check console [F9]"
+PleasecheckconsoleF9.TextColor3 = Color3.fromRGB(0, 0, 0)
+PleasecheckconsoleF9.TextScaled = true
+PleasecheckconsoleF9.TextSize = 14.000
+PleasecheckconsoleF9.TextWrapped = true
+
+Login_2.Name = "Login"
+Login_2.Parent = LOADING
+Login_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Login_2.BackgroundTransparency = 1.000
+Login_2.Position = UDim2.new(-0.0577507615, 0, 0.29411763, 0)
+Login_2.Size = UDim2.new(0, 361, 0, 23)
+Login_2.Visible = false
+Login_2.Font = Enum.Font.Cartoon
+Login_2.Text = "Login as:"
+Login_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Login_2.TextScaled = true
+Login_2.TextSize = 14.000
+Login_2.TextWrapped = true
+
+ImageLabel.Parent = Login_2
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.277008295, 0, 1.30434799, 0)
+ImageLabel.Size = UDim2.new(0, 160, 0, 160)
+ImageLabel.Image = "rbxassetid://59430545"
+
+TextLabel_3.Parent = Login_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.739612162, 0, 2.7391305, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_3.Font = Enum.Font.Cartoon
+TextLabel_3.Text = "USERNAME"
+TextLabel_3.TextColor3 = Color3.fromRGB(131, 131, 131)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = TextLabel_3
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0.0896121264, 0, 0.999130249, 0)
+TextLabel_4.Size = UDim2.new(0, 164, 0, 20)
+TextLabel_4.Font = Enum.Font.Cartoon
+TextLabel_4.Text = "DEFAULT"
+TextLabel_4.TextColor3 = Color3.fromRGB(131, 131, 131)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+Client.Name = "Client"
+Client.Parent = FlakHubV2
+Client.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Client.Size = UDim2.new(0, 100, 0, 100)
+Client.Visible = false
+
+-- Scripts:
+
+local function TLRNSL_fake_script() -- FlakHubV2.LocalScript 
+	local script = Instance.new('LocalScript', FlakHubV2)
+
+	_G.gamen = game.Name
+	_G.license = "active"
+	_G.loaded = "nein"
+	
+	script.Parent.LOADING.Visible = true
+	print("---------FLAK HUB V3---------")
+	print("STARTING...")
+	wait(2)
+	print("LOADING LICENSE...")
+	
+	
+	if _G.license == "active" then
+		wait(3)
+		print("LOADED LICENSE...")
+		print("LOADED GAME NAME")
+		wait(1)
+		print("LOADED HTTP REQUESTS")
+		wait(2)
+		print("LOADED EXP")
+		wait(1)
+		print("SUCCESSFULLY LOADED")
+		print("THANK YOU FOR USING FHV3")
+		print("---------FLAK HUB V3---------")
+		wait(1)
+		_G.loaded = "ja"
+	else
+		print("COULDN'T LOAD LICENSE")
+		_G.loaded = "fehler"
+		print("STOPPING FHV3")
+		wait(2)
+		print("SUCCESSFULLY STOPPED")
+		print("DESTROING IN 10 SEC")
+		print("---------FLAK HUB V3---------")
+		wait(10)
+		script.Parent:Destroy()
+	end
+end
+coroutine.wrap(TLRNSL_fake_script)()
+local function LBAVM_fake_script() -- Login.LocalScript 
+	local script = Instance.new('LocalScript', Login)
+
+	frame = script.Parent
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end
+coroutine.wrap(LBAVM_fake_script)()
+local function DJAQ_fake_script() -- TextLabel_2.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_2)
+
+	while _G.loaded == "nein" do
+			script.Parent.Text = "LOADING..."
+			wait(1)
+			script.Parent.Text = "LOADING."
+			wait(1)
+			script.Parent.Text = "LOADING.."
+			wait(1)
+		end
+		while _G.loaded == "fehler" do
+			script.Parent.Text = "ERROR"
+			script.Parent.TextColor3 = Color3.new(255, 0, 0)
+			wait(5)
+			script.Parent.Text = "CHECK CONSOLE"
+			wait(3)
+		script.Parent.Text = "DESTROYING..."
+		wait(10)
+		script:Destroy()
+		end
+		script.Parent.Visible = false
+		script.Parent.Parent.Parent.Login.Visible = true
+		wait(3)
+		script.Parent.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.Parent.Login.Visible = false
+		script.Parent.Parent:Destroy()
+end
+coroutine.wrap(DJAQ_fake_script)()
+local function AQYRGDN_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local frame = script.Parent
+	
+	
+	
+	local player = game.Players.LocalPlayer
+	
+	
+	
+	local userId = player.UserId
+	
+	local thumbType = Enum.ThumbnailType.AvatarBust
+	
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	
+	local content, isReady = game.Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	
+	
+	
+	
+	frame.Image = content
+	
+	frame.Parent.TextLabel.Text = player.Name
+end
+coroutine.wrap(AQYRGDN_fake_script)()
