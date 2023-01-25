@@ -160,7 +160,7 @@ text_label_4.Visible = true
 text_label_4.Parent = text_label_3
 
 local client = Instance.new("Frame")
-client.Active = true
+client.Active = false
 client.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
 client.Position = UDim2.new(0.230022401, 0, 0.0977564082, 0)
 client.Size = UDim2.new(0, 721, 0, 500)
@@ -222,6 +222,52 @@ text_button.Position = UDim2.new(0.941747546, 0, 0.0645161271, 0)
 text_button.Size = UDim2.new(0, 42, 0, 29)
 text_button.Visible = true
 text_button.Parent = line
+
+local lokal = Instance.new("Frame")
+lokal.BackgroundColor3 = Color3.new(1, 1, 1)
+lokal.BackgroundTransparency = 1
+lokal.Position = UDim2.new(0.234396666, 0, 0.061999999, 0)
+lokal.Size = UDim2.new(0, 552, 0, 469)
+lokal.Visible = true
+lokal.Name = "Lokal"
+lokal.Parent = client
+
+local text_box = Instance.new("TextBox")
+text_box.CursorPosition = -1
+text_box.Font = Enum.Font.SourceSans
+text_box.Text = "WALKINGSPEED"
+text_box.TextColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+text_box.TextScaled = true
+text_box.TextSize = 14
+text_box.TextWrapped = true
+text_box.BackgroundColor3 = Color3.new(1, 1, 1)
+text_box.BorderSizePixel = 0
+text_box.Position = UDim2.new(0.335144937, 0, 0.164179102, 0)
+text_box.Size = UDim2.new(0, 200, 0, 30)
+text_box.Visible = true
+text_box.Parent = lokal
+
+local text_button_2 = Instance.new("TextButton")
+text_button_2.Font = Enum.Font.SourceSans
+text_button_2.Text = "Submit"
+text_button_2.TextColor3 = Color3.new(1, 1, 1)
+text_button_2.TextScaled = true
+text_button_2.TextSize = 14
+text_button_2.TextWrapped = true
+text_button_2.BackgroundColor3 = Color3.new(0.345098, 0.396078, 0.94902)
+text_button_2.Position = UDim2.new(0, 0, 1.17999995, 0)
+text_button_2.Size = UDim2.new(0, 200, 0, 27)
+text_button_2.Visible = true
+text_button_2.Parent = text_box
+
+local uicorner_6 = Instance.new("UICorner")
+uicorner_6.Parent = text_button_2
+
+local local_script_6 = Instance.new("LocalScript")
+local_script_6.Parent = text_button_2
+
+local uicorner_7 = Instance.new("UICorner")
+uicorner_7.Parent = text_box
 
 --//Modules
 
@@ -389,4 +435,21 @@ task.spawn(function()
 	frame.Draggable = true
 	frame.Active = true
 	frame.Line.Selectable = true
+end)
+
+-- LocalScript
+task.spawn(function()
+	local script = local_script_6
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = script.Parent.Parent.Text
+	end)
 end)
